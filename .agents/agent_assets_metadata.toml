@@ -1,0 +1,8 @@
+uploads = []
+generated = []
+
+[[outputs]]
+id = "mxFR2KrSFOWw0yKTWw0gE"
+uri = "file://topi_vappa_website.zip"
+type = "unspecified"
+title = "Topi Vappa 3D Website — Download & Push to GitHub"
