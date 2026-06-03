@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Topi Vappa Biriyani – Trichy | Taste the Legend</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Cinzel:wght@400;600;700;900&family=Raleway:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --gold:#C9960C;--gold2:#F5C842;--gold3:#FFD700;--saffron:#E8820C;
+  --deep:#080503;--dark:#12090302;--db:#1C0D04;--mb:#2D1A08;
+  --cream:#F9F0DC;--red:#8B1A1A;
+  --w:clamp(320px,100vw,1920px);
+}
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;font-size:16px}
+body{font-family:'Raleway',sans-serif;background:#080503;color:var(--cream);overflow-x:hidden}
+::-webkit-scrollbar{width:3px}
+::-webkit-scrollbar-track{background:#080503}
+::-webkit-scrollbar-thumb{background:var(--gold);border-radius:2px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+
+/* CURSOR */
+#cur,#cur2{position:fixed;top:0;left:0;border-radius:50%;pointer-events:none;z-index:9999}
+#cur{width:10px;height:10px;background:var(--gold2);mix-blend-mode:difference;transition:transform .08s}
+#cur2{width:32px;height:32px;border:1px solid rgba(201,150,12,.5);transition:all .15s;margin:-11px 0 0 -11px}
+
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:500;padding:1rem 5%;display:flex;align-items:center;justify-content:space-between;transition:all .4s}
+nav.s{background:rgba(8,5,3,.92);backdrop-filter:blur(20px);border-bottom:1px solid rgba(201,150,12,.15)}
+.nlogo{display:flex;align-items:center;gap:.8rem;text-decoration:none}
+.nlogo img{width:44px;height:44px;object-fit:contain;border-radius:4px}
+.nlogo span{font-family:'Cinzel',serif;font-size:1rem;color:var(--gold2);letter-spacing:.06em}
+.nlinks{display:flex;gap:2rem;list-style:none}
+.nlinks a{font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(249,240,220,.6);text-decoration:none;transition:color .3s;position:relative}
+.nlinks a::after{content:'';position:absolute;bottom:-3px;left:0;right:0;height:1px;background:var(--gold);transform:scaleX(0);transition:transform .3s}
+.nlinks a:hover{color:var(--gold2)}
+.nlinks a:hover::after{transform:scaleX(1)}
+.ncta{padding:.5rem 1.4rem;border:1px solid var(--gold);color:var(--gold2);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;text-decoration:none;transition:all .3s;font-family:'Raleway',sans-serif;background:transparent;cursor:pointer}
+.ncta:hover{background:var(--gold);color:#080503}
+.hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none}
+.hamburger span{width:24px;height:1px;background:var(--gold2);transition:all .3s}
+
+/* HERO */
+#hero{height:100vh;min-height:600px;position:relative;overflow:hidden;display:flex;align-items:center}
+.hbg{position:absolute;inset:0;z-index:0}
+.hbg::after{content:'';position:absolute;inset:0;background:linear-gradient(105deg,rgba(8,5,3,.92) 0%,rgba(8,5,3,.75) 45%,rgba(8,5,3,.3) 100%)}
+.hbg img{width:100%;height:100%;object-fit:cover;object-position:center;filter:brightness(.8) saturate(1.1)}
+.hslider{position:absolute;inset:0;z-index:0}
+.hslide{position:absolute;inset:0;opacity:0;transition:opacity 1.5s ease}
+.hslide.a{opacity:1}
+.hcontent{position:relative;z-index:2;padding:0 5%;max-width:760px;margin-top:4rem}
+.htag{display:inline-flex;align-items:center;gap:.8rem;font-size:.68rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);border:1px solid rgba(201,150,12,.3);padding:.45rem 1.2rem;margin-bottom:2rem;animation:fadeUp .8s .2s both}
+.htag::before{content:'';width:20px;height:1px;background:var(--gold)}
+.htitle{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,6vw,6rem);line-height:1.02;color:var(--cream);margin-bottom:.6rem;animation:fadeUp .8s .35s both}
+.htitle em{font-style:italic;color:var(--gold2);display:block}
+.hsub{font-size:clamp(.9rem,1.5vw,1.1rem);color:rgba(249,240,220,.5);font-weight:300;letter-spacing:.06em;margin-bottom:2rem;animation:fadeUp .8s .5s both}
+.hstars{display:flex;align-items:center;gap:1rem;margin-bottom:2.5rem;animation:fadeUp .8s .6s both}
+.stars{color:var(--gold2);font-size:1rem;letter-spacing:.12em}
+.hrat{font-size:.82rem;color:rgba(249,240,220,.55)}
+.hrats strong{color:var(--gold)}
+.hctas{display:flex;gap:1rem;flex-wrap:wrap;animation:fadeUp .8s .75s both}
+.btn1{padding:.9rem 2.2rem;background:linear-gradient(135deg,var(--gold) 0%,var(--saffron) 100%);color:#080503;font-size:.78rem;font-weight:700;letter-spacing:.15em;text-transform:uppercase;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s;clip-path:polygon(10px 0%,100% 0%,calc(100% - 10px) 100%,0% 100%)}
+.btn1:hover{transform:translateY(-3px);box-shadow:0 18px 45px rgba(201,150,12,.45)}
+.btn2{padding:.9rem 2.2rem;border:1px solid rgba(201,150,12,.5);color:var(--gold2);font-size:.78rem;font-weight:500;letter-spacing:.15em;text-transform:uppercase;background:transparent;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s}
+.btn2:hover{background:rgba(201,150,12,.1);border-color:var(--gold)}
+.btn3{padding:.9rem 2.2rem;background:#25D366;color:#fff;font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:uppercase;border:none;cursor:pointer;text-decoration:none;display:inline-block;transition:all .3s}
+.btn3:hover{background:#1da851;transform:translateY(-2px)}
+.hscroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);display:flex;flex-direction:column;align-items:center;gap:.4rem;color:rgba(249,240,220,.3);font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;animation:bounce 2s infinite}
+.hscroll::before{content:'';width:1px;height:40px;background:linear-gradient(to bottom,transparent,var(--gold),transparent)}
+@keyframes bounce{0%,100%{transform:translateX(-50%) translateY(0)}50%{transform:translateX(-50%) translateY(6px)}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(35px)}to{opacity:1;transform:translateY(0)}}
+
+/* OFFER BANNER */
+.offer-strip{background:linear-gradient(90deg,#1C0D04 0%,#3D1F08 50%,#1C0D04 100%);padding:1.2rem 5%;display:flex;align-items:center;justify-content:center;gap:2rem;flex-wrap:wrap;border-top:1px solid rgba(201,150,12,.2);border-bottom:1px solid rgba(201,150,12,.2)}
+.offer-item{display:flex;align-items:center;gap:.6rem;font-size:.78rem;letter-spacing:.1em;color:rgba(249,240,220,.8)}
+.offer-item span{color:var(--gold2);font-weight:600}
+.offer-divider{width:1px;height:20px;background:rgba(201,150,12,.3)}
+
+/* MARQUEE */
+.marquee-wrap{background:#0E0703;overflow:hidden;padding:.9rem 0;border-bottom:1px solid rgba(201,150,12,.1)}
+.marquee-inner{display:flex;gap:2rem;animation:marquee 30s linear infinite;white-space:nowrap}
+.marquee-inner:hover{animation-play-state:paused}
+@keyframes marquee{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+.mi{font-size:.68rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(201,150,12,.55);flex-shrink:0}
+.md{color:var(--gold);margin-right:2rem;font-size:.8rem}
+
+/* SECTIONS */
+section{padding:6rem 5%}
+.sk{font-size:.68rem;letter-spacing:.35em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.8rem}
+.sh{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3.5vw,3rem);color:var(--cream);line-height:1.2}
+.sh em{font-style:italic;color:var(--gold2)}
+.sdiv{width:70px;height:1px;background:linear-gradient(to right,transparent,var(--gold),transparent);margin:.8rem 0 0}
+.shead{text-align:center;margin-bottom:4rem}
+.shead .sdiv{margin:.8rem auto 0}
+
+/* REVEAL */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.16,1,.3,1)}
+.rv.vis{opacity:1;transform:translateY(0)}
+.d1{transition-delay:.1s}.d2{transition-delay:.2s}.d3{transition-delay:.3s}.d4{transition-delay:.4s}
+
+/* FOOD HERO STRIP */
+.food-hero{display:grid;grid-template-columns:2fr 1fr 1fr;grid-template-rows:320px 320px;gap:3px;background:#080503}
+.fh-cell{position:relative;overflow:hidden;cursor:pointer}
+.fh-cell:first-child{grid-row:span 2}
+.fh-cell img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1),filter .5s}
+.fh-cell:hover img{transform:scale(1.07);filter:brightness(1.1) saturate(1.2)}
+.fh-cell::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(8,5,3,.85) 0%,transparent 55%);transition:opacity .4s}
+.fh-cell:hover::after{opacity:.7}
+.fh-label{position:absolute;bottom:0;left:0;right:0;padding:1.5rem 1.8rem;z-index:2;transform:translateY(5px);transition:transform .4s}
+.fh-cell:hover .fh-label{transform:translateY(0)}
+.fh-tag{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.3rem}
+.fh-name{font-family:'Playfair Display',serif;font-size:clamp(1.1rem,2vw,1.5rem);color:var(--cream)}
+.fh-price{font-family:'Cinzel',serif;font-size:.95rem;color:var(--gold2);margin-top:.3rem}
+.fh-cell:first-child .fh-name{font-size:clamp(1.5rem,3vw,2.2rem)}
+
+/* STORY */
+#story{background:linear-gradient(180deg,#080503 0%,#1C0D04 50%,#080503 100%)}
+.story-wrap{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;max-width:1200px;margin:0 auto}
+.story-imgs{position:relative;height:520px}
+.si-main{position:absolute;top:0;left:0;width:72%;height:380px;overflow:hidden;border:1px solid rgba(201,150,12,.2)}
+.si-main img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.si-main:hover img{transform:scale(1.04)}
+.si-sec{position:absolute;bottom:0;right:0;width:52%;height:240px;overflow:hidden;border:1px solid rgba(201,150,12,.2)}
+.si-sec img{width:100%;height:100%;object-fit:cover}
+.si-badge{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);background:linear-gradient(135deg,var(--gold) 0%,var(--saffron) 100%);width:100px;height:100px;border-radius:50%;display:flex;flex-direction:column;align-items:center;justify-content:center;z-index:10;border:3px solid #080503}
+.sib-n{font-family:'Cinzel',serif;font-size:1.6rem;font-weight:700;color:#080503;line-height:1}
+.sib-t{font-size:.55rem;letter-spacing:.1em;text-transform:uppercase;color:#080503;opacity:.8;text-align:center}
+.story-text .sk{text-align:left}
+.story-text h2{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,3vw,2.8rem);color:var(--cream);line-height:1.2;margin:0 0 1.5rem}
+.story-text h2 em{font-style:italic;color:var(--gold2)}
+.story-text p{color:rgba(249,240,220,.6);line-height:1.9;margin-bottom:1.1rem;font-size:.92rem;font-weight:300}
+.story-stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;margin:2.5rem 0 2rem;border-top:1px solid rgba(201,150,12,.15);padding-top:2rem}
+.ss{text-align:center}
+.ss-n{font-family:'Cinzel',serif;font-size:2rem;color:var(--gold2);display:block}
+.ss-l{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(249,240,220,.4)}
+.siblings{background:rgba(201,150,12,.08);border:1px solid rgba(201,150,12,.15);padding:1.2rem 1.5rem;margin-top:1.5rem}
+.siblings-t{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);margin-bottom:.6rem}
+.siblings-p{font-size:.85rem;color:rgba(249,240,220,.6);font-weight:300;line-height:1.7}
+
+/* MENU */
+#menu{background:#080503}
+.mtabs{display:flex;gap:0;justify-content:center;margin-bottom:3.5rem;border-bottom:1px solid rgba(201,150,12,.18);overflow-x:auto;-ms-overflow-style:none;scrollbar-width:none}
+.mtabs::-webkit-scrollbar{display:none}
+.mtab{padding:.9rem 1.8rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(249,240,220,.4);cursor:pointer;border:none;background:transparent;font-family:'Raleway',sans-serif;border-bottom:2px solid transparent;margin-bottom:-1px;transition:all .3s;white-space:nowrap;flex-shrink:0}
+.mtab.a{color:var(--gold2);border-bottom-color:var(--gold)}
+.mtab:hover{color:var(--cream)}
+.mpanel{display:none;max-width:1200px;margin:0 auto}
+.mpanel.a{display:grid;grid-template-columns:repeat(auto-fill,minmax(290px,1fr));gap:2px}
+.mcard{background:#1C0D04;border:1px solid rgba(201,150,12,.06);position:relative;overflow:hidden;cursor:pointer;transition:all .5s cubic-bezier(.16,1,.3,1);transform-style:preserve-3d}
+.mcard:hover{transform:translateY(-8px) scale(1.025);border-color:rgba(201,150,12,.3);box-shadow:0 30px 70px rgba(0,0,0,.7),0 0 40px rgba(201,150,12,.06);z-index:2}
+.mcard-img{height:200px;overflow:hidden;position:relative}
+.mcard-img img{width:100%;height:100%;object-fit:cover;transition:transform .6s ease}
+.mcard:hover .mcard-img img{transform:scale(1.1)}
+.mcard-img::after{content:'';position:absolute;inset:0;background:linear-gradient(to top,rgba(28,13,4,.9) 0%,transparent 60%)}
+.mcard-body{padding:1.5rem 1.8rem 1.8rem}
+.mcard-tag{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.5rem}
+.mcard-name{font-family:'Playfair Display',serif;font-size:1.3rem;color:var(--cream);margin-bottom:.6rem;line-height:1.3}
+.mcard-desc{font-size:.82rem;color:rgba(249,240,220,.5);line-height:1.75;font-weight:300;margin-bottom:1.2rem}
+.mcard-ft{display:flex;align-items:center;justify-content:space-between}
+.mcard-price{font-family:'Cinzel',serif;font-size:1.1rem;color:var(--gold2)}
+.mcard-spice{font-size:.68rem;color:#c0392b;letter-spacing:.08em}
+.mcard-shine{position:absolute;inset:0;background:linear-gradient(135deg,rgba(255,215,0,.04) 0%,transparent 60%);opacity:0;transition:opacity .4s;pointer-events:none}
+.mcard:hover .mcard-shine{opacity:1}
+.mno-img .mcard-img{display:none}
+.mno-img .mcard-body{padding:2rem 1.8rem}
+
+/* GALLERY real photos */
+#gallery{padding:0}
+.gal-header{padding:5rem 5% 3rem;text-align:center}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:260px;gap:3px}
+.gc{position:relative;overflow:hidden;cursor:pointer}
+.gc.wide{grid-column:span 2}
+.gc.tall{grid-row:span 2}
+.gc img{width:100%;height:100%;object-fit:cover;transition:transform .7s cubic-bezier(.16,1,.3,1),filter .5s}
+.gc:hover img{transform:scale(1.1);filter:brightness(1.15) saturate(1.2)}
+.gc::before{content:'';position:absolute;inset:0;background:rgba(8,5,3,.3);z-index:1;transition:opacity .4s}
+.gc:hover::before{opacity:0}
+.gc-overlay{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,5,3,.9) 0%,transparent 55%);z-index:2;opacity:0;transition:opacity .4s;display:flex;align-items:flex-end;padding:1.5rem}
+.gc:hover .gc-overlay{opacity:1}
+.gc-lbl{font-family:'Playfair Display',serif;font-size:1rem;color:var(--cream)}
+.gc-sub{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);display:block;margin-bottom:.3rem}
+.gal-more{text-align:center;padding:3rem 5%;background:#080503}
+
+/* EXPERIENCE */
+#experience{background:linear-gradient(180deg,#080503 0%,#1C0D04 100%)}
+.exp-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:2px;max-width:1200px;margin:0 auto}
+.exp-card{background:#1C0D04;border:1px solid rgba(201,150,12,.1);padding:3rem 2rem;text-align:center;transition:all .4s;position:relative;overflow:hidden}
+.exp-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(to right,transparent,var(--gold),transparent);opacity:0;transition:opacity .4s}
+.exp-card:hover{border-color:rgba(201,150,12,.3);transform:translateY(-5px)}
+.exp-card:hover::before{opacity:1}
+.exp-icon{font-size:2rem;margin-bottom:1.2rem;filter:grayscale(0)}
+.exp-n{font-family:'Cinzel',serif;font-size:2rem;color:var(--gold2);display:block;margin-bottom:.3rem}
+.exp-l{font-size:.68rem;letter-spacing:.2em;text-transform:uppercase;color:rgba(201,150,12,.6);margin-bottom:.8rem}
+.exp-p{font-size:.82rem;color:rgba(249,240,220,.5);line-height:1.7;font-weight:300}
+
+/* OUTLETS */
+#outlets{background:#080503}
+.out-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:1px;max-width:1200px;margin:0 auto}
+.out-item{background:#1C0D04;border:1px solid rgba(201,150,12,.08);padding:1.2rem 1.5rem;transition:all .3s;cursor:pointer;text-decoration:none;display:block}
+.out-item:hover{background:#2D1A08;border-color:rgba(201,150,12,.25)}
+.out-city{font-family:'Cinzel',serif;font-size:.85rem;color:var(--cream);display:block;margin-bottom:.2rem;transition:color .3s}
+.out-item:hover .out-city{color:var(--gold2)}
+.out-type{font-size:.62rem;letter-spacing:.15em;text-transform:uppercase;color:rgba(201,150,12,.5)}
+.out-intl{background:linear-gradient(135deg,#0A1528 0%,#0A1E3D 100%);border-color:rgba(100,150,255,.15)}
+.out-intl .out-city{color:#88AAFF}
+.out-intl .out-type{color:rgba(100,150,255,.5)}
+.out-intl:hover{border-color:rgba(100,150,255,.35)}
+
+/* REVIEWS */
+#reviews{background:linear-gradient(180deg,#1C0D04 0%,#080503 100%)}
+.rev-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1.5rem;max-width:1200px;margin:0 auto}
+.rcard{background:#0E0703;border:1px solid rgba(201,150,12,.1);padding:2rem 1.8rem;position:relative;overflow:hidden;transition:all .4s}
+.rcard:hover{transform:translateY(-4px);border-color:rgba(201,150,12,.3)}
+.rqm{position:absolute;top:.8rem;right:1.2rem;font-family:'Playfair Display',serif;font-size:5rem;line-height:1;color:rgba(201,150,12,.05);user-select:none}
+.rstars{color:var(--gold2);font-size:.82rem;letter-spacing:.1em;margin-bottom:.8rem}
+.rtxt{font-size:.88rem;line-height:1.85;color:rgba(249,240,220,.6);margin-bottom:1.2rem;font-weight:300}
+.rauth{font-size:.75rem;letter-spacing:.12em;text-transform:uppercase;color:var(--gold)}
+.rrole{font-size:.68rem;color:rgba(249,240,220,.3);margin-top:.2rem}
+
+/* INFO */
+#info{background:#1C0D04;border-top:1px solid rgba(201,150,12,.12)}
+.info-wrap{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:3rem;max-width:1100px;margin:0 auto}
+.ib{}
+.ib-icon{font-size:1.4rem;color:var(--gold);margin-bottom:.8rem}
+.ib-l{font-size:.62rem;letter-spacing:.25em;text-transform:uppercase;color:rgba(201,150,12,.55);margin-bottom:.4rem}
+.ib-v{font-size:.9rem;color:var(--cream);line-height:1.75;font-weight:300}
+.ib-v a{color:var(--gold2);text-decoration:none}
+.ib-v a:hover{text-decoration:underline}
+
+/* SOCIAL */
+.social-row{display:flex;gap:.8rem;margin-top:1rem;flex-wrap:wrap}
+.soc-btn{width:38px;height:38px;border:1px solid rgba(201,150,12,.25);display:flex;align-items:center;justify-content:center;color:rgba(201,150,12,.6);font-size:.85rem;text-decoration:none;transition:all .3s}
+.soc-btn:hover{background:var(--gold);color:#080503;border-color:var(--gold)}
+
+/* CTA */
+#cta{background:linear-gradient(135deg,#1C0D04 0%,#3D1F08 50%,#1C0D04 100%);text-align:center;padding:8rem 5%;position:relative;overflow:hidden}
+.cta-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:700px;height:300px;background:radial-gradient(ellipse,rgba(201,150,12,.12) 0%,transparent 70%);pointer-events:none}
+.cta-content{position:relative;z-index:1}
+.cta-logo{width:80px;height:80px;object-fit:contain;margin:0 auto 2rem;border-radius:8px;opacity:.9}
+.cta-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,4vw,3.5rem);color:var(--cream);margin-bottom:1rem}
+.cta-title em{font-style:italic;color:var(--gold2)}
+.cta-sub{color:rgba(249,240,220,.5);font-size:.95rem;font-weight:300;margin-bottom:3rem;max-width:500px;margin-left:auto;margin-right:auto}
+.cta-acts{display:flex;gap:1rem;justify-content:center;flex-wrap:wrap}
+
+/* FOOTER */
+footer{background:#040302;border-top:1px solid rgba(201,150,12,.1);padding:3rem 5%}
+.foot-main{display:grid;grid-template-columns:2fr 1fr 1fr 1fr;gap:3rem;margin-bottom:3rem}
+.foot-brand img{width:60px;height:60px;object-fit:contain;border-radius:6px;margin-bottom:1rem}
+.foot-brand p{font-size:.82rem;color:rgba(249,240,220,.4);font-weight:300;line-height:1.7;margin-top:.8rem}
+.foot-col h4{font-family:'Cinzel',serif;font-size:.78rem;letter-spacing:.15em;text-transform:uppercase;color:var(--gold);margin-bottom:1.2rem}
+.foot-col a{display:block;font-size:.78rem;color:rgba(249,240,220,.4);text-decoration:none;margin-bottom:.6rem;transition:color .3s}
+.foot-col a:hover{color:var(--gold2)}
+.foot-bottom{border-top:1px solid rgba(201,150,12,.08);padding-top:1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:gap;gap:1rem}
+.foot-copy{font-size:.7rem;color:rgba(249,240,220,.25)}
+
+/* WHATSAPP FLOAT */
+.wa-float{position:fixed;bottom:2rem;right:2rem;z-index:400;width:56px;height:56px;background:#25D366;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 8px 25px rgba(37,211,102,.35);cursor:pointer;text-decoration:none;transition:all .3s;animation:pulse 2s infinite}
+.wa-float:hover{transform:scale(1.1);box-shadow:0 12px 35px rgba(37,211,102,.5)}
+@keyframes pulse{0%,100%{box-shadow:0 8px 25px rgba(37,211,102,.35)}50%{box-shadow:0 8px 40px rgba(37,211,102,.6)}}
+.wa-float svg{width:28px;height:28px;fill:#fff}
+
+/* LIGHTBOX */
+#lb{position:fixed;inset:0;background:rgba(4,3,2,.95);z-index:1000;display:none;align-items:center;justify-content:center;padding:2rem}
+#lb.open{display:flex}
+#lb img{max-width:90vw;max-height:88vh;object-fit:contain;border:1px solid rgba(201,150,12,.2)}
+#lb-close{position:absolute;top:1.5rem;right:2rem;font-size:2rem;color:var(--cream);cursor:pointer;opacity:.7;background:none;border:none;transition:opacity .3s}
+#lb-close:hover{opacity:1}
+
+/* MOBILE */
+@media(max-width:1024px){.story-wrap{grid-template-columns:1fr}.story-imgs{display:none}.food-hero{grid-template-columns:1fr 1fr}.fh-cell:first-child{grid-column:span 2;grid-row:span 1}.gal-grid{grid-template-columns:repeat(2,1fr)}.gc.wide,.gc.tall{grid-column:span 1;grid-row:span 1}.foot-main{grid-template-columns:1fr 1fr}}
+@media(max-width:768px){.nlinks,.ncta{display:none}.hamburger{display:flex}nav.open .nlinks{display:flex;flex-direction:column;position:absolute;top:100%;left:0;right:0;background:rgba(8,5,3,.97);padding:2rem 5%;gap:1.5rem}.food-hero{grid-template-columns:1fr;grid-auto-rows:220px}.fh-cell:first-child{grid-column:span 1}.gal-grid{grid-template-columns:1fr 1fr}.out-grid{grid-template-columns:repeat(2,1fr)}.foot-main{grid-template-columns:1fr}.offer-strip{gap:1rem}.offer-divider{display:none}}
+@media(max-width:480px){.gal-grid{grid-template-columns:1fr}.out-grid{grid-template-columns:1fr 1fr}.hctas{flex-direction:column}.btn1,.btn2,.btn3{text-align:center}}
+</style>
+</head>
+<body>
+
+<!-- WhatsApp Float -->
+<a href="https://wa.link/55j0p9" target="_blank" class="wa-float" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+</a>
+
+<!-- Lightbox -->
+<div id="lb">
+  <button id="lb-close" onclick="closeLB()">✕</button>
+  <img id="lb-img" src="" alt="Food photo">
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#hero" class="nlogo">
+    <img src="https://www.topivappa.com/assets/img/tv-logo.png" alt="Topi Vappa Logo" onerror="this.style.display='none'">
+    <span>Topi Vappa</span>
+  </a>
+  <ul class="nlinks">
+    <li><a href="#story">Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#gallery">Gallery</a></li>
+    <li><a href="#outlets">Outlets</a></li>
+    <li><a href="#reviews">Reviews</a></li>
+    <li><a href="#info">Visit</a></li>
+  </ul>
+  <a href="https://order.topivappa.com/" target="_blank" class="ncta">Order Now</a>
+  <button class="hamburger" id="ham" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hslider">
+    <div class="hslide a">
+      <div class="hbg">
+        <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552209/Chicken_Biriyani_-_Copy_bjrscs.jpg" alt="Chicken Biriyani">
+      </div>
+    </div>
+    <div class="hslide">
+      <div class="hbg">
+        <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Mutton_Biriyani_twfcpc.jpg" alt="Mutton Biriyani">
+      </div>
+    </div>
+    <div class="hslide">
+      <div class="hbg">
+        <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Tandoori_Biriayni_mxiykt.jpg" alt="Tandoori Biriyani">
+      </div>
+    </div>
+    <div class="hslide">
+      <div class="hbg">
+        <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754555445/tvbnew_vsrmhw.jpg" alt="Topi Vappa Restaurant">
+      </div>
+    </div>
+  </div>
+
+  <div class="hcontent">
+    <div class="htag">Tiruchirappalli's Most Beloved Biriyani</div>
+    <h1 class="htitle">
+      The Legend of<br>
+      <em>Topi Vappa</em>
+    </h1>
+    <p class="hsub">35+ Outlets Across India &amp; Overseas · Born in Chennai</p>
+    <div class="hstars">
+      <span class="stars">★★★★★</span>
+      <span class="hrat"><strong class="hrats">4.2★</strong> &nbsp;·&nbsp; 1,482 Reviews &nbsp;·&nbsp; Google Trichy</span>
+    </div>
+    <div class="hctas">
+      <a href="https://order.topivappa.com/" target="_blank" class="btn1">Order Online</a>
+      <a href="tel:07448555533" class="btn2">Call &amp; Reserve</a>
+      <a href="https://wa.link/55j0p9" target="_blank" class="btn3">WhatsApp Us</a>
+    </div>
+  </div>
+  <div class="hscroll" aria-hidden="true">Scroll</div>
+</section>
+
+<!-- OFFER STRIP -->
+<div class="offer-strip">
+  <div class="offer-item">🍱 <span>Family Packs</span> from ₹900</div>
+  <div class="offer-divider"></div>
+  <div class="offer-item">🛵 <span>Home Delivery</span> Available</div>
+  <div class="offer-divider"></div>
+  <div class="offer-item">📞 Call <span>074485 55533</span></div>
+  <div class="offer-divider"></div>
+  <div class="offer-item">⭐ <span>4.2 Stars</span> on Google</div>
+  <div class="offer-divider"></div>
+  <div class="offer-item">🌍 <span>Dubai · Abu Dhabi · Sharjah</span> & more</div>
+</div>
+
+<!-- MARQUEE -->
+<div class="marquee-wrap" aria-hidden="true">
+  <div class="marquee-inner">
+    <span class="mi">Chicken Biriyani</span><span class="md">✦</span>
+    <span class="mi">Mutton Biriyani</span><span class="md">✦</span>
+    <span class="mi">Al Faham BBQ</span><span class="md">✦</span>
+    <span class="mi">Crab Lolipop</span><span class="md">✦</span>
+    <span class="mi">Petti Soru Combo</span><span class="md">✦</span>
+    <span class="mi">Tandoori Biriyani</span><span class="md">✦</span>
+    <span class="mi">Chicken 65 Biriyani</span><span class="md">✦</span>
+    <span class="mi">Bread Halwa</span><span class="md">✦</span>
+    <span class="mi">Chicken Clear Soup</span><span class="md">✦</span>
+    <span class="mi">Chicken Fried Rice</span><span class="md">✦</span>
+    <span class="mi">Chicken Biriyani</span><span class="md">✦</span>
+    <span class="mi">Mutton Biriyani</span><span class="md">✦</span>
+    <span class="mi">Al Faham BBQ</span><span class="md">✦</span>
+    <span class="mi">Crab Lolipop</span><span class="md">✦</span>
+    <span class="mi">Petti Soru Combo</span><span class="md">✦</span>
+    <span class="mi">Tandoori Biriyani</span><span class="md">✦</span>
+    <span class="mi">Chicken 65 Biriyani</span><span class="md">✦</span>
+    <span class="mi">Bread Halwa</span><span class="md">✦</span>
+    <span class="mi">Chicken Clear Soup</span><span class="md">✦</span>
+    <span class="mi">Chicken Fried Rice</span><span class="md">✦</span>
+  </div>
+</div>
+
+<!-- FOOD HERO GRID with REAL photos -->
+<div class="food-hero">
+  <div class="fh-cell" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552209/Chicken_Biriyani_-_Copy_bjrscs.jpg')">
+    <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552209/Chicken_Biriyani_-_Copy_bjrscs.jpg" alt="Chicken Biriyani">
+    <div class="fh-label">
+      <span class="fh-tag">Signature · #1 Bestseller</span>
+      <div class="fh-name">Chicken Biriyani</div>
+      <div class="fh-price">₹250</div>
+    </div>
+  </div>
+  <div class="fh-cell" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Mutton_Biriyani_twfcpc.jpg')">
+    <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Mutton_Biriyani_twfcpc.jpg" alt="Mutton Biriyani">
+    <div class="fh-label">
+      <span class="fh-tag">Chef's Choice</span>
+      <div class="fh-name">Mutton Biriyani</div>
+      <div class="fh-price">₹320</div>
+    </div>
+  </div>
+  <div class="fh-cell" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552231/chicken_65_Biriyani_yfurmm.jpg')">
+    <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552231/chicken_65_Biriyani_yfurmm.jpg" alt="Chicken 65 Biriyani">
+    <div class="fh-label">
+      <span class="fh-tag">Fan Favourite</span>
+      <div class="fh-name">Chicken 65 Biriyani</div>
+      <div class="fh-price">₹280</div>
+    </div>
+  </div>
+  <div class="fh-cell" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Tandoori_Biriayni_mxiykt.jpg')">
+    <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Tandoori_Biriayni_mxiykt.jpg" alt="Tandoori Biriyani">
+    <div class="fh-label">
+      <span class="fh-tag">Tandoor Craft</span>
+      <div class="fh-name">Tandoori Biriyani</div>
+      <div class="fh-price">₹300</div>
+    </div>
+  </div>
+  <div class="fh-cell" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552205/Chicken_Fried_Rice_eqhvr7.jpg')">
+    <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552205/Chicken_Fried_Rice_eqhvr7.jpg" alt="Chicken Fried Rice">
+    <div class="fh-label">
+      <span class="fh-tag">Rice Special</span>
+      <div class="fh-name">Chicken Fried Rice</div>
+      <div class="fh-price">₹180</div>
+    </div>
+  </div>
+</div>
+
+<!-- STORY -->
+<section id="story">
+  <div class="story-wrap">
+    <div class="story-imgs rv">
+      <div class="si-main">
+        <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754555199/tvp-image_ufhhrl.jpg" alt="Topi Vappa Restaurant">
+      </div>
+      <div class="si-sec">
+        <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754555457/house_i0yj8m.jpg" alt="Topi Vappa Interior">
+      </div>
+      <div class="si-badge">
+        <span class="sib-n">4.2</span>
+        <span class="sib-t">Google Stars</span>
+      </div>
+    </div>
+    <div class="story-text">
+      <span class="sk rv">Our Story</span>
+      <h2 class="rv d1">Crafted by <em>Passion,</em><br>Inspired by Tradition</h2>
+      <p class="rv d2">Born out of the combined experience and love for biriyani from <strong style="color:var(--gold2)">six brothers</strong>, Topi Vappa Biriyani brings the rich flavours of Chennai-style biriyani to the fast-casual dining scene across South India.</p>
+      <p class="rv d2">With a dedication to authenticity and quality, Topi Vappa uses only the freshest ingredients and time-honoured cooking techniques — from slow-dum biriyani to live-fire Al Faham BBQ — to deliver an exceptional dining experience every single time.</p>
+      <p class="rv d3">What started in Trichy has now grown to <strong style="color:var(--gold2)">35+ outlets</strong> across Tamil Nadu, Kerala, and the UAE — with each outlet maintaining the same home-cooked standard that made the first outlet legendary.</p>
+      <div class="story-stats rv d3">
+        <div class="ss"><span class="ss-n">35+</span><span class="ss-l">Outlets</span></div>
+        <div class="ss"><span class="ss-n">4.2★</span><span class="ss-l">Avg Rating</span></div>
+        <div class="ss"><span class="ss-n">₹250</span><span class="ss-l">Starts From</span></div>
+      </div>
+      <div class="siblings rv d4">
+        <div class="siblings-t">✦ Multi-Cuisine Excellence</div>
+        <div class="siblings-p">Biriyani · Chinese · Arabian · Tandoori · BBQ — All under one roof. Dine-in, Takeaway, Delivery &amp; Catering available.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MENU with real images -->
+<section id="menu">
+  <div class="shead">
+    <span class="sk rv">Our Creations</span>
+    <h2 class="sh rv">A Menu of <em>Legends</em></h2>
+    <div class="sdiv"></div>
+  </div>
+  <div class="mtabs">
+    <button class="mtab a" data-p="biryani">Biriyani</button>
+    <button class="mtab" data-p="grills">Grills &amp; BBQ</button>
+    <button class="mtab" data-p="starters">Starters</button>
+    <button class="mtab" data-p="rice">Rice &amp; Extras</button>
+    <button class="mtab" data-p="desserts">Soups &amp; Desserts</button>
+  </div>
+
+  <div class="mpanel a" id="p-biryani">
+    <div class="mcard rv">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552209/Chicken_Biriyani_-_Copy_bjrscs.jpg" alt="Chicken Biriyani"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Signature · #1 Bestseller</span>
+        <div class="mcard-name">Chicken Biriyani</div>
+        <div class="mcard-desc">Tender chicken slow-cooked in aromatic saffron-infused basmati. Served with raita and salna. Enough for one very hungry person.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹250</span><span class="mcard-spice">🌶 Medium</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d1">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Mutton_Biriyani_twfcpc.jpg" alt="Mutton Biriyani"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Chef's Choice</span>
+        <div class="mcard-name">Mutton Biriyani</div>
+        <div class="mcard-desc">Slow-cooked bone-in mutton with marrow flavour infused into every saffron grain. The crowd-favourite at every table.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹320</span><span class="mcard-spice">🌶🌶 Spicy</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d2">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552231/chicken_65_Biriyani_yfurmm.jpg" alt="Chicken 65 Biriyani"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Fusion Delight</span>
+        <div class="mcard-name">Chicken 65 Biriyani</div>
+        <div class="mcard-desc">Crispy spiced chicken 65 tossed through freshly cooked biriyani. A Topi Vappa original that keeps you coming back.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹280</span><span class="mcard-spice">🌶🌶 Spicy</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d3">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Tandoori_Biriayni_mxiykt.jpg" alt="Tandoori Biriyani"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Tandoor Craft</span>
+        <div class="mcard-name">Tandoori Biriyani</div>
+        <div class="mcard-desc">Biriyani cooked with tandoor-smoked chicken for a distinctive char aroma. The meeting of two culinary legends.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹300</span><span class="mcard-spice">🌶 Smoky</span></div>
+      </div>
+    </div>
+    <div class="mcard rv mno-img">
+      <div class="mcard-shine"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Family Pack</span>
+        <div class="mcard-name">Chicken Biriyani Family Pack</div>
+        <div class="mcard-desc">The legendary family biriyani — generous portions that feed 4–6 people. Ideal for celebrations, gatherings and weekends.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹900+</span><span class="mcard-spice">🌶 Medium</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d1 mno-img">
+      <div class="mcard-shine"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Fan Favourite</span>
+        <div class="mcard-name">Petti Soru with Sahar Combo</div>
+        <div class="mcard-desc">The full-meal box that went viral. Layered biriyani, curry and accompaniments. Quantity is legendary. Rated ⭐⭐⭐⭐⭐ by guests.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹450</span><span class="mcard-spice">🌶 Medium</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mpanel" id="p-grills">
+    <div class="mcard rv">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552223/IMG_8135_ctz7u9.jpg" alt="Al Faham BBQ"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">House Special · Arabian Style</span>
+        <div class="mcard-name">Al Faham BBQ</div>
+        <div class="mcard-desc">Whole chicken marinated in authentic Yemeni spices, grilled over live charcoal fire. A show-stopper that arrives sizzling.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹650</span><span class="mcard-spice">🌶 Smoky</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d1">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552234/IMG_8143_y1f2rn.jpg" alt="Chicken BBQ"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Grill</span>
+        <div class="mcard-name">Chicken Barbeque</div>
+        <div class="mcard-desc">Char-grilled chicken glazed in our house BBQ masala. Served on a sizzling platter with tangy slaw and mint dip.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹380</span><span class="mcard-spice">🌶🌶 Spicy</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d2">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552237/IMG_8156_haman6.jpg" alt="Tandoori Chicken"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Tandoor</span>
+        <div class="mcard-name">Tandoori Chicken</div>
+        <div class="mcard-desc">Yoghurt-marinated chicken slow-roasted in our in-house clay tandoor. Served with mint chutney and pickled onions.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹340</span><span class="mcard-spice">🌶 Mild</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d3">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552217/IMG_8160_y2xzyq.jpg" alt="Grilled Chicken"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Live Grill</span>
+        <div class="mcard-name">Grilled Chicken Special</div>
+        <div class="mcard-desc">Marinated chicken pieces grilled to perfection over open flame, served with house sauces and roasted vegetables.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹360</span><span class="mcard-spice">🌶 Medium</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mpanel" id="p-starters">
+    <div class="mcard rv">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552199/IMG_8198_utunbg.jpg" alt="Crab Lollipop"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Seafood · Must Try</span>
+        <div class="mcard-name">Crab Lolipop</div>
+        <div class="mcard-desc">Crispy crab meat on a skewer, fried golden with our secret spice coating. Irresistibly addictive — order extra!</div>
+        <div class="mcard-ft"><span class="mcard-price">₹280</span><span class="mcard-spice">🌶 Crispy</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d1">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552196/IMG_8212_c50cyy.jpg" alt="Chicken Lollipop"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Starter · Classic</span>
+        <div class="mcard-name">Chicken Lollipop</div>
+        <div class="mcard-desc">Frenched chicken drumettes in our aromatic batter. Crispy outside, juicy inside. The classic starter done to absolute perfection.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹220</span><span class="mcard-spice">🌶🌶 Spicy</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d2">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552281/IMG_8268_wzoags.jpg" alt="Chicken Chukka"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Dry Fry · Signature</span>
+        <div class="mcard-name">Chicken Chukka</div>
+        <div class="mcard-desc">Dry-tossed chicken with whole spices, curry leaves and shallots on a high flame. Smoky, bold and intensely flavoured.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹260</span><span class="mcard-spice">🌶🌶🌶 Hot!</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d3">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552197/IMG_8299_zcdbvq.jpg" alt="Mutton Starters"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Mutton · Rich</span>
+        <div class="mcard-name">Mutton Sukka</div>
+        <div class="mcard-desc">Bone-in mutton slow-cooked dry with freshly ground spice blend. A deeply satisfying starter that pairs beautifully with parotta.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹320</span><span class="mcard-spice">🌶🌶 Spicy</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mpanel" id="p-rice">
+    <div class="mcard rv">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552205/Chicken_Fried_Rice_eqhvr7.jpg" alt="Chicken Fried Rice"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Rice Dish</span>
+        <div class="mcard-name">Chicken Fried Rice</div>
+        <div class="mcard-desc">Wok-tossed basmati with tender chicken, vegetables and soya — the perfect companion to any side dish on our menu.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹180</span><span class="mcard-spice">Mild · Comfort</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d1">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552192/IMG_8304_t1c415.jpg" alt="Plain Biriyani"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Pure Classic</span>
+        <div class="mcard-name">Plain Biriyani</div>
+        <div class="mcard-desc">Fragrant basmati cooked in whole spices and ghee with no meat — but with all the aromatic depth that defines Topi Vappa.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹150</span><span class="mcard-spice">🌿 Veg Friendly</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d2">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552189/IMG_8315_waq6kb.jpg" alt="Rice dish"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Combo</span>
+        <div class="mcard-name">Sahar Combo</div>
+        <div class="mcard-desc">Full combo meal with biriyani, salan, raita, and our signature side. The complete Topi Vappa experience in one tray.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹380</span><span class="mcard-spice">🌶 Medium</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="mpanel" id="p-desserts">
+    <div class="mcard rv">
+      <div class="mcard-shine"></div>
+      <div class="mcard-img"><img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552213/IMG_8338_d6q4dy.jpg" alt="Soup"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Soup · Comforting</span>
+        <div class="mcard-name">Chicken Clear Soup</div>
+        <div class="mcard-desc">Light, nourishing broth with tender chicken and fresh herbs. The ideal starter that warms you up for the main event.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹120</span><span class="mcard-spice">Mild · Healing</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d1 mno-img">
+      <div class="mcard-shine"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Dessert · House Special</span>
+        <div class="mcard-name">Bread Halwa</div>
+        <div class="mcard-desc">Slow-cooked in ghee, saffron and cardamom — our signature Bread Halwa is the dessert that guests travel back for. Warm, rich and indulgent.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹90</span><span class="mcard-spice">Sweet · Indulgent</span></div>
+      </div>
+    </div>
+    <div class="mcard rv d2 mno-img">
+      <div class="mcard-shine"></div>
+      <div class="mcard-body">
+        <span class="mcard-tag">Beverage</span>
+        <div class="mcard-name">Saffron Milkshake</div>
+        <div class="mcard-desc">House-churned cold milkshake with real saffron and cardamom. Thick, aromatic and the perfect cool-down after the heat of biriyani.</div>
+        <div class="mcard-ft"><span class="mcard-price">₹110</span><span class="mcard-spice">Cool · Sweet</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY — REAL PHOTOS -->
+<section id="gallery" style="padding:0">
+  <div class="gal-header">
+    <span class="sk rv">From Our Kitchen</span>
+    <h2 class="sh rv">Every Dish, a <em>Masterpiece</em></h2>
+    <div class="sdiv" style="margin:.8rem auto 0"></div>
+  </div>
+  <div class="gal-grid">
+    <div class="gc wide tall" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754555199/tvp-image_ufhhrl.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754555199/tvp-image_ufhhrl.jpg" alt="Topi Vappa Restaurant">
+      <div class="gc-overlay"><div><span class="gc-sub">The Experience</span><div class="gc-lbl">Topi Vappa Trichy</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552209/Chicken_Biriyani_-_Copy_bjrscs.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552209/Chicken_Biriyani_-_Copy_bjrscs.jpg" alt="Chicken Biriyani">
+      <div class="gc-overlay"><div><span class="gc-sub">Bestseller</span><div class="gc-lbl">Chicken Biriyani</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Mutton_Biriyani_twfcpc.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Mutton_Biriyani_twfcpc.jpg" alt="Mutton Biriyani">
+      <div class="gc-overlay"><div><span class="gc-sub">Chef's Choice</span><div class="gc-lbl">Mutton Biriyani</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552231/chicken_65_Biriyani_yfurmm.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552231/chicken_65_Biriyani_yfurmm.jpg" alt="Chicken 65 Biriyani">
+      <div class="gc-overlay"><div><span class="gc-sub">Fusion</span><div class="gc-lbl">Chicken 65 Biriyani</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Tandoori_Biriayni_mxiykt.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552182/Tandoori_Biriayni_mxiykt.jpg" alt="Tandoori Biriyani">
+      <div class="gc-overlay"><div><span class="gc-sub">Tandoor</span><div class="gc-lbl">Tandoori Biriyani</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552205/Chicken_Fried_Rice_eqhvr7.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552205/Chicken_Fried_Rice_eqhvr7.jpg" alt="Chicken Fried Rice">
+      <div class="gc-overlay"><div><span class="gc-sub">Rice</span><div class="gc-lbl">Chicken Fried Rice</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552223/IMG_8135_ctz7u9.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552223/IMG_8135_ctz7u9.jpg" alt="Grilled Dish">
+      <div class="gc-overlay"><div><span class="gc-sub">Grill</span><div class="gc-lbl">BBQ Special</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552234/IMG_8143_y1f2rn.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552234/IMG_8143_y1f2rn.jpg" alt="Chicken Dish">
+      <div class="gc-overlay"><div><span class="gc-sub">Grill</span><div class="gc-lbl">Chicken Grill</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552202/IMG_8065_sex8a9.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552202/IMG_8065_sex8a9.jpg" alt="Food Dish">
+      <div class="gc-overlay"><div><span class="gc-sub">Special</span><div class="gc-lbl">House Special</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754552205/IMG_8116_blnkgx.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754552205/IMG_8116_blnkgx.jpg" alt="Food Dish">
+      <div class="gc-overlay"><div><span class="gc-sub">Kitchen</span><div class="gc-lbl">Chef's Platter</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754555457/house_i0yj8m.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754555457/house_i0yj8m.jpg" alt="Restaurant">
+      <div class="gc-overlay"><div><span class="gc-sub">Ambiance</span><div class="gc-lbl">Our Restaurant</div></div></div>
+    </div>
+    <div class="gc" onclick="openLB('https://res.cloudinary.com/dslbtazg2/image/upload/v1754555445/tvbnew_vsrmhw.jpg')">
+      <img src="https://res.cloudinary.com/dslbtazg2/image/upload/v1754555445/tvbnew_vsrmhw.jpg" alt="Topi Vappa">
+      <div class="gc-overlay"><div><span class="gc-sub">Brand</span><div class="gc-lbl">Topi Vappa</div></div></div>
+    </div>
+  </div>
+  <div class="gal-more">
+    <a href="https://www.topivappa.com/gallery.php" target="_blank" class="btn2">View Full Gallery →</a>
+  </div>
+</section>
+
+<!-- EXPERIENCE NUMBERS -->
+<section id="experience">
+  <div class="shead">
+    <span class="sk rv">By the Numbers</span>
+    <h2 class="sh rv">Why Trichy <em>Loves</em> Us</h2>
+    <div class="sdiv"></div>
+  </div>
+  <div class="exp-grid">
+    <div class="exp-card rv">
+      <div class="exp-icon">🍛</div>
+      <span class="exp-n">35+</span>
+      <span class="exp-l">Outlets India &amp; Overseas</span>
+      <p class="exp-p">From Trichy to Dubai, our biriyani has crossed borders and oceans.</p>
+    </div>
+    <div class="exp-card rv d1">
+      <div class="exp-icon">⭐</div>
+      <span class="exp-n">4.2</span>
+      <span class="exp-l">Google Star Rating</span>
+      <p class="exp-p">1,482 verified reviews praising our taste, service and portions.</p>
+    </div>
+    <div class="exp-card rv d2">
+      <div class="exp-icon">👨‍👩‍👧‍👦</div>
+      <span class="exp-n">6</span>
+      <span class="exp-l">Brothers Behind the Brand</span>
+      <p class="exp-p">Born from a family's passion and love for authentic biriyani craft.</p>
+    </div>
+    <div class="exp-card rv d3">
+      <div class="exp-icon">🌍</div>
+      <span class="exp-n">3+</span>
+      <span class="exp-l">Countries Served</span>
+      <p class="exp-p">India, UAE (Dubai, Abu Dhabi, Sharjah, Ras Al Khaimah) and growing.</p>
+    </div>
+    <div class="exp-card rv d4">
+      <div class="exp-icon">⚡</div>
+      <span class="exp-n">₹250</span>
+      <span class="exp-l">Starts From</span>
+      <p class="exp-p">World-class biriyani at prices that make you smile. Quality without compromise.</p>
+    </div>
+  </div>
+</section>
+
+<!-- OUTLETS -->
+<section id="outlets">
+  <div class="shead">
+    <span class="sk rv">Find Us Near You</span>
+    <h2 class="sh rv">Our <em>Locations</em></h2>
+    <div class="sdiv"></div>
+  </div>
+  <p class="rv" style="text-align:center;color:rgba(249,240,220,.5);font-size:.88rem;margin-bottom:3rem;font-weight:300">Click any city to open Google Maps directions</p>
+  <div class="out-grid">
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+TRICHY/@10.7869013,78.6959764,17z/" target="_blank" class="out-item"><span class="out-city">Trichy</span><span class="out-type">Main Outlet · ⭐ 4.2</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+MADIPAKKAM+BRANCH/@12.9659093,80.2006674,17z/" target="_blank" class="out-item"><span class="out-city">Chennai</span><span class="out-type">Madipakkam Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+THANJAVUR+NEW+BUS+STAND+BRANCH/@10.7499837,79.1100274,17z/" target="_blank" class="out-item"><span class="out-city">Thanjavur</span><span class="out-type">New Bus Stand</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+THANJAVUR+RAILWAY+STATION+BRANCH/@10.7787428,79.1379221,17z/" target="_blank" class="out-item"><span class="out-city">Thanjavur 2.0</span><span class="out-type">Railway Station</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+KUMBAKONAM+BRANCH/@10.9553798,79.3867071,17z/" target="_blank" class="out-item"><span class="out-city">Kumbakonam</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/Topi+Vappa+Biriyani+Salem+Branch/@11.6726257,78.1389892,17z/" target="_blank" class="out-item"><span class="out-city">Salem</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+MADURAI+BRANCH/@9.9717119,78.1226912,17z/" target="_blank" class="out-item"><span class="out-city">Madurai</span><span class="out-type">Branch</span></a>
+    <a href="https://maps.app.goo.gl/yj5hR1Ar8Z2R6TxY8" target="_blank" class="out-item"><span class="out-city">Mayiladuthurai</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+NAGERCOIL+BRANCH/@8.1925064,77.4287209,17z/" target="_blank" class="out-item"><span class="out-city">Nagercoil</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+ERODE+BRANCH/@11.3331383,77.7250696,17z/" target="_blank" class="out-item"><span class="out-city">Erode</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+TIRUVANNAMALAI+BRANCH/@12.2423208,79.0709816,17z/" target="_blank" class="out-item"><span class="out-city">Tiruvannamalai</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+PATTUKOTTAI+BRANCH/@10.4255719,79.3158663,17z/" target="_blank" class="out-item"><span class="out-city">Pattukottai</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+BATLAGUNDU+BRANCH/@10.1626943,77.710774,17z/" target="_blank" class="out-item"><span class="out-city">Batlagundu</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+RAJAPALAYAM+BRANCH/@9.4528054,77.553375,17z/" target="_blank" class="out-item"><span class="out-city">Rajapalayam</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+ROYAPURAM/@13.109626,80.2888964,17z/" target="_blank" class="out-item"><span class="out-city">Royapuram</span><span class="out-type">Chennai Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+MANNARGUDI+BRANCH/@10.6664265,79.4453806,17z/" target="_blank" class="out-item"><span class="out-city">Mannargudi</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+KARAIKUDI/@10.0922417,78.7800525,17z/" target="_blank" class="out-item"><span class="out-city">Karaikudi</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+ERNAKULAM+BRANCH/@9.9851739,76.2789747,17z/" target="_blank" class="out-item"><span class="out-city">Ernakulam</span><span class="out-type">Kerala Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+THIRUNINRAVUR/@13.1250044,80.0346029,17z/" target="_blank" class="out-item"><span class="out-city">Thiruninravur</span><span class="out-type">Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRAYANI+AL+KARAMA+BRANCH+DUBAI/@24.8895226,54.2219831,9z/" target="_blank" class="out-item out-intl"><span class="out-city">Dubai 🇦🇪</span><span class="out-type">Al Karama Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+SALAM+STREET+ABU+DHABI/@24.4949981,53.2203024,9z/" target="_blank" class="out-item out-intl"><span class="out-city">Abu Dhabi 🇦🇪</span><span class="out-type">Salam Street</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+AL+QUSAIS+BRANCH+DUBAI/@25.2844574,55.3865318,17z/" target="_blank" class="out-item out-intl"><span class="out-city">Sharjah 🇦🇪</span><span class="out-type">Al Qusais Branch</span></a>
+    <a href="https://www.google.com/maps/place/TOPI+VAPPA+BIRIYANI+RAS+AL+KHAIMAH/@25.7941618,55.968294,17z/" target="_blank" class="out-item out-intl"><span class="out-city">Ras Al Khaimah 🇦🇪</span><span class="out-type">International Branch</span></a>
+  </div>
+</section>
+
+<!-- REVIEWS -->
+<section id="reviews">
+  <div class="shead">
+    <span class="sk rv">What Guests Say</span>
+    <h2 class="sh rv">Voices of <em>Satisfaction</em></h2>
+    <div class="sdiv"></div>
+  </div>
+  <div class="rev-grid">
+    <div class="rcard rv">
+      <div class="rqm">"</div>
+      <div class="rstars">★★★★★</div>
+      <p class="rtxt">Tried the Petti Soru with Sahar Combo — it was super tasty and the quantity was huge. Totally worth every rupee. Highly recommend if you want a filling, flavourful meal!</p>
+      <div class="rauth">Verified Guest</div><div class="rrole">Google Review · 3 months ago</div>
+    </div>
+    <div class="rcard rv d1">
+      <div class="rqm">"</div>
+      <div class="rstars">★★★★★</div>
+      <p class="rtxt">I have eaten at many biryani shops in Trichy, but the taste I liked the most was from Topi Vappa. The chicken biryani at ₹250 is enough for one very hungry person.</p>
+      <div class="rauth">Nageshwari V.</div><div class="rrole">Local Guide · 29 Reviews</div>
+    </div>
+    <div class="rcard rv d2">
+      <div class="rqm">"</div>
+      <div class="rstars">★★★★☆</div>
+      <p class="rtxt">Located near the airport on Pudukottai main road, good ambiance for a small restaurant. Food quality and taste are consistently excellent. A must-visit in Trichy!</p>
+      <div class="rauth">Gopi N.</div><div class="rrole">Local Guide · 1,638 Reviews</div>
+    </div>
+    <div class="rcard rv d3">
+      <div class="rqm">"</div>
+      <div class="rstars">★★★★★</div>
+      <p class="rtxt">Awesome service and food quality. Captain Imamhassain gave great response and made our experience memorable. The Al Faham BBQ was absolutely divine!</p>
+      <div class="rauth">Happy Diner</div><div class="rrole">Google Review · Trichy</div>
+    </div>
+    <div class="rcard rv d1">
+      <div class="rqm">"</div>
+      <div class="rstars">★★★★★</div>
+      <p class="rtxt">Food taste quality was good and yummy — especially in chicken dishes. The quantity was more than expected. Great value for money. Will definitely visit again!</p>
+      <div class="rauth">Local Food Lover</div><div class="rrole">Google Review · 4 months ago</div>
+    </div>
+    <div class="rcard rv d2">
+      <div class="rqm">"</div>
+      <div class="rstars">★★★★★</div>
+      <p class="rtxt">Six brothers running a successful chain — you can taste the family pride in every dish. The Mutton Biriyani had perfectly cooked pieces and the flavour was out of this world.</p>
+      <div class="rauth">Biriyani Lover</div><div class="rrole">Google Review · Trichy</div>
+    </div>
+  </div>
+</section>
+
+<!-- INFO -->
+<section id="info" style="background:#1C0D04;border-top:1px solid rgba(201,150,12,.12)">
+  <div class="shead">
+    <span class="sk rv">Come Visit Us</span>
+    <h2 class="sh rv">Trichy <em>Location</em></h2>
+    <div class="sdiv"></div>
+  </div>
+  <div class="info-wrap">
+    <div class="ib rv">
+      <div class="ib-icon">📍</div>
+      <div class="ib-l">Address</div>
+      <div class="ib-v">73, Periyar St, Subramaniyapuram,<br>Sangillyandapuram,<br>Tiruchirappalli – 620020</div>
+    </div>
+    <div class="ib rv d1">
+      <div class="ib-icon">🕐</div>
+      <div class="ib-l">Opening Hours</div>
+      <div class="ib-v">Daily · Opens 11:30 AM<br>Lunch &amp; Dinner<br>Last order 10:30 PM</div>
+    </div>
+    <div class="ib rv d2">
+      <div class="ib-icon">📞</div>
+      <div class="ib-l">Contact</div>
+      <div class="ib-v"><a href="tel:07448555533">074485 55533</a><br>Dine-in · Takeaway<br>Delivery · Catering</div>
+    </div>
+    <div class="ib rv d3">
+      <div class="ib-icon">💳</div>
+      <div class="ib-l">Payments</div>
+      <div class="ib-v">Cash · Credit &amp; Debit Cards<br>Google Pay · UPI<br>NFC Payments</div>
+    </div>
+    <div class="ib rv">
+      <div class="ib-icon">✨</div>
+      <div class="ib-l">Amenities</div>
+      <div class="ib-v">Wheelchair Accessible<br>Family Friendly · High Chairs<br>Free Parking · Reservations</div>
+    </div>
+    <div class="ib rv d1">
+      <div class="ib-icon">🌐</div>
+      <div class="ib-l">Online &amp; Socials</div>
+      <div class="ib-v"><a href="https://order.topivappa.com/" target="_blank">Order Online</a><br><a href="https://menu.topivappa.in" target="_blank">View Full Menu</a><br><a href="https://topivappa.com" target="_blank">topivappa.com</a></div>
+      <div class="social-row">
+        <a href="https://www.instagram.com/topivappabiriyani_/" target="_blank" class="soc-btn" title="Instagram">📷</a>
+        <a href="https://www.facebook.com/TopivappaBiriyani" target="_blank" class="soc-btn" title="Facebook">f</a>
+        <a href="https://youtube.com/@topivappa9543" target="_blank" class="soc-btn" title="YouTube">▶</a>
+        <a href="https://wa.link/hq0gnp" target="_blank" class="soc-btn" title="WhatsApp">💬</a>
+        <a href="https://twitter.com/topi_vappa" target="_blank" class="soc-btn" title="Twitter">𝕏</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="cta">
+  <div class="cta-glow" aria-hidden="true"></div>
+  <div class="cta-content">
+    <img src="https://www.topivappa.com/assets/img/tv-logo.png" alt="Topi Vappa Logo" class="cta-logo rv" onerror="this.style.display='none'">
+    <h2 class="cta-title rv">Ready to Taste<br><em>Trichy's Legend?</em></h2>
+    <p class="cta-sub rv d1">1,482 happy guests can't be wrong. Order online now or walk in to our Trichy outlet — we're open daily from 11:30 AM.</p>
+    <div class="cta-acts rv d2">
+      <a href="https://order.topivappa.com/" target="_blank" class="btn1">Order Online Now</a>
+      <a href="tel:07448555533" class="btn2">Call to Reserve</a>
+      <a href="https://wa.link/55j0p9" target="_blank" class="btn3">WhatsApp Order</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="foot-main">
+    <div class="foot-brand">
+      <img src="https://www.topivappa.com/assets/img/tv-logo.png" alt="Topi Vappa" onerror="this.style.display='none'">
+      <div style="font-family:'Cinzel',serif;font-size:1rem;color:var(--gold2);margin-bottom:.5rem">Topi Vappa Biriyani</div>
+      <p>Born from a family's passion. Crafted with tradition. Served with pride across 35+ outlets in India and overseas.</p>
+    </div>
+    <div class="foot-col">
+      <h4>Quick Links</h4>
+      <a href="#menu">Our Menu</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#outlets">All Outlets</a>
+      <a href="#reviews">Reviews</a>
+      <a href="https://order.topivappa.com/" target="_blank">Order Online</a>
+    </div>
+    <div class="foot-col">
+      <h4>Business</h4>
+      <a href="https://www.topivappa.com/franchise.php" target="_blank">Franchise</a>
+      <a href="https://www.topivappa.com/form1.php" target="_blank">Investment</a>
+      <a href="https://www.topivappa.com/career.php" target="_blank">Careers</a>
+      <a href="https://www.topivappa.com/team.php" target="_blank">Our Team</a>
+      <a href="https://www.topivappa.com/outlet.php" target="_blank">All Outlets</a>
+    </div>
+    <div class="foot-col">
+      <h4>Contact</h4>
+      <a href="tel:07448555533">074485 55533</a>
+      <a href="https://wa.link/55j0p9" target="_blank">WhatsApp</a>
+      <a href="https://topivappa.com" target="_blank">topivappa.com</a>
+      <a href="https://www.topivappa.com/privacy-policy.php" target="_blank">Privacy Policy</a>
+    </div>
+  </div>
+  <div class="foot-bottom">
+    <span class="foot-copy">© 2026 Topi Vappa Biriyani. All rights reserved. Trichy · Tamil Nadu · India</span>
+    <span class="foot-copy">Bringing authentic biriyani to 35+ locations across India &amp; the UAE</span>
+  </div>
+</footer>
+
+<script>
+// Cursor
+const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
+let mx=0,my=0,rx=0,ry=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+(function tick(){rx+=(mx-rx)*.14;ry+=(my-ry)*.14;cur.style.transform=`translate(${mx-5}px,${my-5}px)`;cur2.style.transform=`translate(${rx}px,${ry}px)`;requestAnimationFrame(tick)})();
+
+// Nav scroll + hamburger
+const nav=document.getElementById('nav'),ham=document.getElementById('ham');
+window.addEventListener('scroll',()=>nav.classList.toggle('s',scrollY>60));
+ham.addEventListener('click',()=>nav.classList.toggle('open'));
+
+// Hero slider
+let slide=0;
+const slides=document.querySelectorAll('.hslide');
+setInterval(()=>{slides[slide].classList.remove('a');slide=(slide+1)%slides.length;slides[slide].classList.add('a');},4500);
+
+// Scroll reveal
+const rvEls=document.querySelectorAll('.rv');
+const obs=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('vis');obs.unobserve(e.target)}}),{threshold:.1});
+rvEls.forEach(el=>obs.observe(el));
+
+// Menu tabs
+document.querySelectorAll('.mtab').forEach(t=>{
+  t.addEventListener('click',()=>{
+    document.querySelectorAll('.mtab').forEach(x=>x.classList.remove('a'));
+    document.querySelectorAll('.mpanel').forEach(x=>x.classList.remove('a'));
+    t.classList.add('a');
+    const p=document.getElementById('p-'+t.dataset.p);
+    p.classList.add('a');
+    p.querySelectorAll('.rv').forEach(el=>{el.classList.remove('vis');setTimeout(()=>el.classList.add('vis'),80)});
+  });
+});
+
+// 3D tilt on menu cards
+document.querySelectorAll('.mcard').forEach(c=>{
+  c.addEventListener('mousemove',e=>{
+    const r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+    c.style.transform=`translateY(-8px) scale(1.025) rotateX(${-y*6}deg) rotateY(${x*6}deg)`;
+  });
+  c.addEventListener('mouseleave',()=>c.style.transform='');
+});
+
+// Lightbox
+function openLB(src){document.getElementById('lb-img').src=src;document.getElementById('lb').classList.add('open');document.body.style.overflow='hidden'}
+function closeLB(){document.getElementById('lb').classList.remove('open');document.body.style.overflow=''}
+document.getElementById('lb').addEventListener('click',e=>{if(e.target===document.getElementById('lb'))closeLB()});
+document.addEventListener('keydown',e=>{if(e.key==='Escape')closeLB()});
+
+// Counter animation
+function animateCounters(){
+  document.querySelectorAll('.exp-n,.ss-n').forEach(el=>{
+    const txt=el.textContent;
+    const num=parseFloat(txt.replace(/[^0-9.]/g,''));
+    if(!num)return;
+    const suf=txt.replace(num.toString(),'');
+    let start=0,steps=60;
+    const inc=num/steps;
+    const iv=setInterval(()=>{start+=inc;if(start>=num){el.textContent=txt;clearInterval(iv);return}
+    el.textContent=Number.isInteger(num)?Math.floor(start)+suf:start.toFixed(1)+suf},25);
+  });
+}
+const expSec=document.getElementById('experience');
+const expObs=new IntersectionObserver(es=>{if(es[0].isIntersecting){animateCounters();expObs.disconnect()}},{threshold:.3});
+expObs.observe(expSec);
+</script>
+</body>
+</html>
